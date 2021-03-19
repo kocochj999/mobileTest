@@ -11,7 +11,6 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
 public class BasePage {
-	AppiumDriver<MobileElement> driver;
 	private WebDriverWait explicitwait;
 	private long timeOut = 60;
 	private MobileElement element;

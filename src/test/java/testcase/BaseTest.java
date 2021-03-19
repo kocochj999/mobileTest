@@ -22,12 +22,12 @@ public class BaseTest {
 
 	@BeforeMethod(alwaysRun = true)
 	public void startApp() throws MalformedURLException {
-		cap.setCapability("deviceName", deviceName); // find in phone setting?
+		cap.setCapability("deviceName", deviceName);
 		cap.setCapability("udid", udid); // find in adb
 		cap.setCapability("platformName", platformName);
-		cap.setCapability("platformVersion", platformVersion); // find in phone
-		cap.setCapability("appPackage", appPackage); // find in phone need APK info
-		cap.setCapability("appActivity", appActivity); // find in phone
+		cap.setCapability("platformVersion", platformVersion);
+		cap.setCapability("appPackage", appPackage);
+		cap.setCapability("appActivity", appActivity);
 		URL url = new URL("http://127.0.0.1:4723/wd/hub");
 		driver = new AppiumDriver<MobileElement>(url, cap);
 	}

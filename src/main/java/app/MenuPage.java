@@ -18,9 +18,6 @@ public class MenuPage extends BasePage {
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Add project\")")
 	MobileElement addProjectButton;
 
-	@AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='com.todoist:id/name' and @text='Try Boards']") // parameterize it with projectname to click different projects
-	MobileElement project;
-
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Settings']/parent::android.widget.RelativeLayout")
 	MobileElement settingButton;
 
@@ -31,10 +28,6 @@ public class MenuPage extends BasePage {
 
 	public MobileElement getProject(String name){
 		return getDynamicElement(driver, projectDynamicPath, name);		
-	}
-		
-	public MobileElement getProject(){
-		return project;		
 	}
 
 	public void clickProjectBtn() {

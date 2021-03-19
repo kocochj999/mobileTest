@@ -18,8 +18,8 @@ public class MobileTest extends BaseTest {
 
 	@Test
 	public void mobileTest() throws Exception {
-		String projectName = "Test Project";
-		String taskName = "Test Task";
+		String projectName = "Automation project";
+		String taskName = "Automation task";
 
 		// Login
 		LoginPage login = new LoginPage(driver);
@@ -28,7 +28,7 @@ public class MobileTest extends BaseTest {
 		login.wait(5);
 
 		//==========1=============
-		// send API to create Project use POST
+		// create project
 		projectId = project.createProject(projectName);
 
 		//Refresh app
@@ -53,7 +53,7 @@ public class MobileTest extends BaseTest {
 		project.back();
 		project.refresh();
 
-		// Verify task created through API use GET with verification inside
+		// Verify task is created
 		task.verifyTaskIsCreated(taskName);
 
 		//==========3=============
